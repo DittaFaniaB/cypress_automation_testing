@@ -14,7 +14,8 @@ Cypress.Commands.add('login', (email, password) => {
     cy.get('#send2').click();
 })
 Cypress.Commands.add('signOut', () => { 
-    cy.scrollTo('top');
+    cy.reload();
+    cy.get('.logged-in').should('contain', 'Welcome, ');
     cy.xpath('(//button[@class="action switch"])').first().click();
     cy.get('.authorization-link > a').first().click();
 })

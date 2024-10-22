@@ -34,6 +34,7 @@ describe('Magento', () => {
         // click add to cart
         cy.xpath(`//*[@id="product-addtocart-button"]`).click();
         cy.get('.message-success').should('be.visible');
+        cy.wait(1000);
     })
 
     it('[TC0003] User can access cart page after adding products ', () => {

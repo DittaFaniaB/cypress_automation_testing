@@ -15,20 +15,8 @@ class loginPage {
     verifyErrorMsg(message){
         cy.get(this.errorMsg).should('contain.text', message)
     }
-    forgotYourPass(){
-        cy.get(this.forgotPass).click()
-    }
-    verifyForgot(message){
-        cy.get(this.notif).should('contain.text', message)
-    }
-    resetMyPass() {
-        cy.get(this.resetPass).click()
-    }
     customerLogin(message) {
         cy.get(this.notif).should('contain.text', message)
-    }
-    successChangePass(message) {
-        cy.get(this.successChange).should('contain.text', message)
     }
 }
 

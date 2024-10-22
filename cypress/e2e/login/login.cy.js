@@ -15,15 +15,16 @@ describe('Magento', () => {
 
     it('[TC0013] User can not login with empty field ', () => {
       loginPage.clickLoginBtn();
-      cy.get('#email-error').should('contain.text', 'This is a required field.');
-      cy.get('#pass-error').should('contain.text', 'This is a required field.');    
+      // cy.get('#email-error').should('contain.text', 'This is a required field.');
+      // cy.get('#pass-error').should('contain.text', 'This is a required field.');    
+      cy.get('.message-error > div').should('contain.text', 'A login and a password are required.');
     })
 
     it('[TC0014] User can not login with invalid email format', () => {
       cy.login(userLogin.validPassword,userLogin.validPassword);
       cy.get('#email-error').should('contain.text', 'Please enter a valid email address (Ex: johndoe@domain.com).');
     })
-    
+
     it('[TC0015] User can login with valid credentials', () => {
       cy.get(loginPage.email).type(userLogin.validEmail)
       cy.get(loginPage.pass).type(userLogin.validPassword) 
