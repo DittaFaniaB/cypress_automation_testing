@@ -8,7 +8,7 @@ describe('Magento', () => {
       cy.visit('');
       cy.get(shoppingCartPage.singInButton).click();
       cy.login(fixture.validEmail,fixture.validPassword);
-      cy.get('.logged-in').should('contain', 'Welcome, ');
+      cy.get(shoppingCartPage.profile).should('contain', 'Welcome, ');
       cy.wait(1000);
     })
     
@@ -18,7 +18,7 @@ describe('Magento', () => {
     })
 
     it('[TC0002] User can add products to cart', () => {
-        cy.get('#ui-id-3').click();
+        cy.get(shoppingCartPage.btnWhatsNew).click();
         cy.xpath(`//li[@class="item"]/a[contains(text(), 'Tees')]`).first().click();
         cy.xpath(`(//div[@class="product-item-info"])[1]`).click();
         cy.wait(1000);

@@ -8,6 +8,8 @@ class loginPage {
     notif = '.base'
     resetPass = '#form-validate > .actions-toolbar > div.primary > .action'
     successChange ='.message-success > div'
+    emailError = '#email-error'
+    profile = '.logged-in'
 
     clickLoginBtn(){
         cy.get(this.loginBtn).click()

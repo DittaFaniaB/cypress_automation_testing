@@ -2,6 +2,8 @@ class ShoppingCartPage{
     singInButton = '.panel > .header > .authorization-link > a';
     inputFieldDiscountCode = '//input[@name="coupon_code"]';
     btnApplyDiscount = '//button[@value="Apply Discount"]';
+    profile = '.logged-in';
+    btnWhatsNew = '#ui-id-3';
 
     randomText(length) {
         let result = '';
