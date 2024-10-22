@@ -1,0 +1,9 @@
+{
+  "validEmail": "testqa2024@mail.com",
+  "validPassword": "QA2024test",
+  "invalidEmail": "asdfghjkl@gmail.com",
+  "invalidPassword": "qwerty7890",
+  "message": {
+        "validEmail": "Welcome"
+    }
+}
